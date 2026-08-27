@@ -5,14 +5,14 @@ library(tidyverse)
 library(ggplot2)
 library(gt)
 ### read endmembers
-endmembers <- read_excel("data/endmember.xlsx")
+endmembers <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/endmember.xlsx")
 
 ## import model outputs 
-LK1<-read_csv("lk1_Hg_mixing_results.csv")
-EM<-read_csv("EM_Hg_mixing_results.csv")
-CT<-read_csv("CT_Hg_mixing_results.csv")
-GG<-read_csv("GG_Hg_mixing_results.csv")
-DP2<-read_csv("DP2_Hg_mixing_results.csv")
+LK1<-read_csv("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/lk1_Hg_mixing_results.csv")
+EM<-read_csv("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/EM_Hg_mixing_results.csv")
+CT<-read_csv("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/CT_Hg_mixing_results.csv")
+GG<-read_csv("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/GG_Hg_mixing_results.csv")
+DP2<-read_csv("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/DP2_Hg_mixing_results.csv")
 
 
 ####Merge 
@@ -122,11 +122,11 @@ mix_summary_clean %>%
 
 
 #### import lake data for a combo figure
-lake_lk1<- read_excel("data/lk1_Hgiso_mm.xlsx")
-lake_CT <- read_excel("data/CT_Hgiso_mm.xlsx")
-lake_EM <- read_excel("data/EM_Hgiso_mm.xlsx")
-lake_GG <- read_excel("data/GG_Hgiso_mm.xlsx")
-lake_DP2<- read_excel("data/DP2_Hgiso_mm.xlsx")
+lake_lk1<- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/lk1_Hgiso_mm.xlsx")
+lake_CT <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/CT_Hgiso_mm.xlsx")
+lake_EM <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/EM_Hgiso_mm.xlsx")
+lake_GG <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/GG_Hgiso_mm.xlsx")
+lake_DP2<- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/DP2_Hgiso_mm.xlsx")
 
 combo_lakes<-combined<- bind_rows(lake_lk1, lake_CT, lake_EM, lake_GG, lake_DP2)
 
@@ -233,7 +233,7 @@ geom_point(
 
 p2
 ggsave(
-  filename = "endmembers_withlake.pdf",
+  filename = "~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/endmembers_withlake.pdf",
   plot = p2,
   width = 8,
   height = 5

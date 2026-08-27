@@ -8,8 +8,8 @@ library(ggplot2)
 
 
 ####Import data 
-lake <- read_excel("data/EM_Hgiso_mm.xlsx")
-endmembers <- read_excel("data/endmember.xlsx")
+lake <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/EM_Hgiso_mm.xlsx")
+endmembers <- read_excel("~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/data/endmember.xlsx")
 
 
 
@@ -115,7 +115,7 @@ for(i in 1:nrow(lake)) {
 results
 # Save results
 write.csv(results,
-          "EM_Hg_mixing_results.csv",
+          "~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/EM_Hg_mixing_results.csv",
           row.names = FALSE)
 
 #
@@ -134,7 +134,7 @@ p1<-ggplot(results,
   )
 p1
 ggsave(
-  filename = "guanothroughtime_EM.pdf",
+  filename = "~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/guanothroughtime_EM.pdf",
   plot = p1,
   width = 8,
   height = 5
@@ -163,7 +163,7 @@ p2<-ggplot() +
 
 p2
 ggsave(
-  filename = "D199D200_EM.pdf",
+  filename = "~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/D199D200_EM.pdf",
   plot = p2,
   width = 8,
   height = 5
@@ -202,7 +202,7 @@ p<-ggplot(summary_period,
   )
 p
 ggsave(
-  filename = "Hg_source_pre_post1850_EM.pdf",
+  filename = "~/Library/CloudStorage/OneDrive-AustralianNationalUniversity/GitHub/mixing_model/Hg_source_pre_post1850_EM.pdf",
   plot = p,
   width = 8,
   height = 5
